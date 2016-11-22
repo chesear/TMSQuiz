@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title>TMS Quiz E-Pack Settings</title>
+  <script src="../scripts/navigation.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/npack.css">
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+  <div class="container">
+  <a href="./epack.html">
+    <img src="../images/EPack.fw.png" alt="E-Pack"
+	 id="packname" width="432" height="144">
+  </a>
+  <a href="index.html">
+    <img src="../images/TMSQuizIcon.fw.png" alt="TMS Quiz Home"
+       id="homebutton" style="border:0;" width="108" height="36">
+  </a>
+  <p id="packtitle">Grow in Christlikeness</p>
+
+<div class="content">
+<!-- SETTINGS -->
+<div id="settingssection">
+  <form name="settings" action="">
+    <input type="radio" name="reforverse" value="ref" onClick=0>Show Reference/Quiz Verse<br>
+    <input type="radio" name="reforverse" value="verse" onClick=0>Show Verse/Quiz Reference<br><br>
+    Verses to Include:<br>
+    <input type="checkbox" name="all" id="all" id="pickall" 
+           onclick="toggle(this)">Select All<br>
+    Love<br>
+    <input type="checkbox" name="verse" id="e1">John 13:34-35<br>
+    <input type="checkbox" name="verse" id="e2">1 John 3:18<br>
+    Humility<br>
+    <input type="checkbox" name="verse" id="e3">Philippians 2:3-4<br>
+    <input type="checkbox" name="verse" id="e4">1 Peter 5:5-6<br>
+    Purity<br>
+    <input type="checkbox" name="verse" id="e5">Ephesians 5:3<br>
+    <input type="checkbox" name="verse" id="e6">1 Peter 2:11<br>
+    Honesty<br>
+    <input type="checkbox" name="verse" id="e7">Leviticus 19:11<br>
+    <input type="checkbox" name="verse" id="e8">Acts 24:16<br>
+    Faith<br>
+    <input type="checkbox" name="verse" id="e9">Hebrews 11:6<br>
+    <input type="checkbox" name="verse" id="e10">Romans 4:20-21<br>
+    Good Works<br>
+    <input type="checkbox" name="verse" id="e11">Galatians 6:9-10<br>
+    <input type="checkbox" name="verse" id="e12">Matthew 5:16<br><br>
+
+    <input type="button" value="Begin Quizzing" id="startquiz"
+	   onclick="startQuiz(this.form)">
+  </form>
+</div>
+
+<!-- VERSE QUIZ -->
+<div id="versequizsection">
+  <p>Spelling counts, punctuation and capitalization do not!</p>
+  <p class="ref" id="refdisplay1">ref1 here</p>
+  <form>
+    <textarea type="text" name="verseentry" id="verseentrybox" 
+	      onKeydown="Javascript: if (event.keyCode==13 || event.which==13) checkVerseAnswer();"></textarea>
+    <input type="button" value="Check" onclick="checkVerseAnswer()">
+  </form>
+  <p class="ref" id="refdisplay2">ref2 here</p>
+</div>
+
+<!-- REF QUIZ -->
+<div id="refquizsection">
+  <p>Spelling counts, punctuation and capitalization do not!</p>
+  <form>
+    <input type="text" name="refentry1" id="refentry1box">
+    <p class="verse" id="versedisplay">verse here</p>
+    <input type="text" name="refentry2" id="refentry2box"
+	   onKeydown="Javascript: if (event.keyCode==13 || event.which==13) checkRefAnswer();">
+    <input type="button" value="Check" onclick="checkRefAnswer()">
+  </form>
+</div>
+  </div> <!-- end content div -->
+  </div> <!-- end container div -->
+</body>
+</html>

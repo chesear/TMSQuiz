@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title>TMS Quiz D-Pack Settings</title>
+  <script src="../scripts/navigation-D.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/npack.css">
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+  <div class="container">
+  <a href="./dpack.html">
+    <img src="../images/DPack.fw.png" alt="D-Pack"
+	 id="packname" width="432" height="144">
+  </a>
+  <a href="index.html">
+    <img src="../images/TMSQuizIcon.fw.png" alt="TMS Quiz Home"
+       id="homebutton" style="border:0;" width="108" height="36">
+  </a>
+  <p id="packtitle">Being Christ's Disciple</p>
+
+<div class="content">
+<!-- SETTINGS -->
+<div id="settingssection">
+  <form name="settings" action="">
+    <input type="radio" name="reforverse" value="ref" onClick=0>Show Reference/Quiz Verse<br>
+    <input type="radio" name="reforverse" value="verse" onClick=0>Show Verse/Quiz Reference<br><br>
+    Verses to Include:<br>
+    <input type="checkbox" name="all" id="all" id="pickall" 
+           onclick="toggle(this)">Select All<br>
+    Put Christ First<br>
+    <input type="checkbox" name="verse" id="d1">Matthew 6:33<br>
+    <input type="checkbox" name="verse" id="d2">Luke 9:23<br>
+    Separate From the World<br>
+    <input type="checkbox" name="verse" id="d3">1 John 2:15-16<br>
+    <input type="checkbox" name="verse" id="d4">Romans 12:2<br>
+    Be Steadfast<br>
+    <input type="checkbox" name="verse" id="d5">1 Corinthians 15:58<br>
+    <input type="checkbox" name="verse" id="d6">Hebrews 12:3<br>
+    Serve Others<br>
+    <input type="checkbox" name="verse" id="d7">Mark 10:45<br>
+    <input type="checkbox" name="verse" id="d8">2 Corinthians 4:5<br>
+    Give Generously<br>
+    <input type="checkbox" name="verse" id="d9">Proverbs 3:9-10<br>
+    <input type="checkbox" name="verse" id="d10">2 Corinthians 9:6-7<br>
+    Develop World Vision<br>
+    <input type="checkbox" name="verse" id="d11">Acts 1:8<br>
+    <input type="checkbox" name="verse" id="d12">Matthew 28:19-20<br><br>
+
+    <input type="button" value="Begin Quizzing" id="startquiz"
+	   onclick="startQuiz(this.form)">
+  </form>
+</div>
+
+<!-- VERSE QUIZ -->
+<div id="versequizsection">
+  <p>Spelling counts, punctuation and capitalization do not!</p>
+  <p class="ref" id="refdisplay1">ref1 here</p>
+  <form>
+    <textarea type="text" name="verseentry" id="verseentrybox" 
+	      onKeydown="Javascript: if (event.keyCode==13 || event.which==13) checkVerseAnswer();"></textarea>
+    <input type="button" value="Check" onclick="checkVerseAnswer()">
+  </form>
+  <p class="ref" id="refdisplay2">ref2 here</p>
+</div>
+
+<!-- REF QUIZ -->
+<div id="refquizsection">
+  <p>Spelling counts, punctuation and capitalization do not!</p>
+  <form>
+    <input type="text" name="refentry1" id="refentry1box">
+    <p class="verse" id="versedisplay">verse here</p>
+    <input type="text" name="refentry2" id="refentry2box"
+	   onKeydown="Javascript: if (event.keyCode==13 || event.which==13) checkRefAnswer();">
+    <input type="button" value="Check" onclick="checkRefAnswer()">
+  </form>
+</div>
+  </div> <!-- end content div -->
+  </div> <!-- end container div -->
+</body>
+</html>

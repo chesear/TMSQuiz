@@ -1,0 +1,21 @@
+/* CSS for the n-pack page */
+
+#settingssection {
+  color: red;
+  display: inline; /* switch with none (js) */
+}
+
+#versequizsection {
+  color: blue;
+  display: none; /* switch with inline (js) */
+}
+
+#refquizsection {
+  color: green;
+  display: none; /* switch with inline (js) */
+}
+
+#verseentrybox {
+  width: 400;
+  height: 100;
+}

@@ -1,0 +1,71 @@
+.container {
+  //color: pink;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  text-align: center;
+  min-height: 100%;
+  position: relative;
+  background-color: rgb(225, 230, 225);
+}
+
+#banner {
+  display: block;
+  margin: auto;
+  //background-color: blue;
+}
+
+#packchoices {
+  display: inline-block;
+  margin: auto;
+  //background-color: red;
+}
+
+.content {
+
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: inherit;
+  //height: 100px;
+  //background-color: orange;
+}
+
+html, body {
+  margin: 0;
+  font-family: Courier New;
+  background-image: url("../images/candlebackgroundsmall.fw.png");
+  background-color: black;
+}
+
+.button {
+  border-radius: 18px;
+  padding: 10px 15px;
+  font-size: 20;
+  font-family: Courier New;
+  color: white;
+}
+
+#apack {
+  background: red;
+}
+#bpack {
+  background: orange;
+}
+#cpack {
+  background: green;
+}
+#dpack {
+  background: blue;
+}
+#epack {
+  background: purple;
+}
+#allpacks {
+  background: black;
+}

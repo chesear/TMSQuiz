@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title>TMS Quiz B-Pack Settings</title>
+  <script src="../scripts/navigation.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/npack.css">
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+  <div class="container">
+  <a href="./bpack.html">
+    <img src="../images/BPack.fw.png" alt="B-Pack"
+	 id="packname" width="432" height="144">
+  </a>
+  <a href="index.html">
+    <img src="../images/TMSQuizIcon.fw.png" alt="TMS Quiz Home"
+       id="homebutton" style="border:0;" width="108" height="36">
+  </a>
+  <p id="packtitle">Proclaim Christ</p>
+
+<div class="content">
+<!-- SETTINGS -->
+<div id="settingssection">
+  <form name="settings" action="">
+    <input type="radio" name="reforverse" value="ref" onClick=0>Show Reference/Quiz Verse<br>
+    <input type="radio" name="reforverse" value="verse" onClick=0>Show Verse/Quiz Reference<br><br>
+    Verses to Include:<br>
+    <input type="checkbox" name="all" id="all" id="pickall" 
+           onclick="toggle(this)">Select All<br>
+    All Have Sinned<br>
+    <input type="checkbox" name="verse" id="b1">Romans 3:23<br>
+    <input type="checkbox" name="verse" id="b2">Isaiah 53:6<br>
+    Sin's Penalty<br>
+    <input type="checkbox" name="verse" id="b3">Romans 6:23<br>
+    <input type="checkbox" name="verse" id="b4">Hebrews 9:27<br>
+    Christ Paid the Penalty<br>
+    <input type="checkbox" name="verse" id="b5">Romans 5:8<br>
+    <input type="checkbox" name="verse" id="b6">1 Peter 3:18<br>
+    Salvation is Not By Works<br>
+    <input type="checkbox" name="verse" id="b7">Ephesians 2:8-9<br>
+    <input type="checkbox" name="verse" id="b8">Titus 3:5<br>
+    Must Receive Christ<br>
+    <input type="checkbox" name="verse" id="b9">John 1:12<br>
+    <input type="checkbox" name="verse" id="b10">Revelation 3:20<br>
+    Assurance of Salvation<br>
+    <input type="checkbox" name="verse" id="b11">1 John 5:13<br>
+    <input type="checkbox" name="verse" id="b12">John 5:24<br><br>
+
+    <input type="button" value="Begin Quizzing" id="startquiz"
+	   onclick="startQuiz(this.form)">
+  </form>
+</div>
+
+<!-- VERSE QUIZ -->
+<div id="versequizsection">
+  <p>Spelling counts, punctuation and capitalization do not!</p>
+  <p class="ref" id="refdisplay1">ref1 here</p>
+  <form>
+    <textarea type="text" name="verseentry" id="verseentrybox" 
+	      onKeydown="Javascript: if (event.keyCode==13 || event.which==13) checkVerseAnswer();"></textarea>
+    <input type="button" value="Check" onclick="checkVerseAnswer()">
+  </form>
+  <p class="ref" id="refdisplay2">ref2 here</p>
+</div>
+
+<!-- REF QUIZ -->
+<div id="refquizsection">
+  <p>Spelling counts, punctuation and capitalization do not!</p>
+  <form>
+    <input type="text" name="refentry1" id="refentry1box">
+    <p class="verse" id="versedisplay">verse here</p>
+    <input type="text" name="refentry2" id="refentry2box"
+	   onKeydown="Javascript: if (event.keyCode==13 || event.which==13) checkRefAnswer();">
+    <input type="button" value="Check" onclick="checkRefAnswer()">
+  </form>
+</div>
+  </div> <!-- end content div -->
+  </div> <!-- end container div -->
+</body>
+</html>

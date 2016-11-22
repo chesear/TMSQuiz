@@ -1,0 +1,79 @@
+<html>
+<head>
+  <title>TMS Quiz C-Pack Settings</title>
+  <script src="../scripts/navigation.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/npack.css">
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+  <div class="container">
+  <a href="./cpack.html">
+    <img src="../images/CPack.fw.png" alt="C-Pack"
+	 id="packname" width="432" height="144">
+  </a>
+  <a href="index.html">
+    <img src="../images/TMSQuizIcon.fw.png" alt="TMS Quiz Home"
+       id="homebutton" style="border:0;" width="108" height="36">
+  </a>
+  <p id="packtitle">Reliance on God's Resources</p>
+
+<div class="content">
+<!-- SETTINGS -->
+<div id="settingssection">
+  <form name="settings" action="">
+    <input type="radio" name="reforverse" value="ref" onClick=0>Show Reference/Quiz Verse<br>
+    <input type="radio" name="reforverse" value="verse" onClick=0>Show Verse/Quiz Reference<br><br>
+    Verses to Include:<br>
+    <input type="checkbox" name="all" id="all" id="pickall" 
+           onclick="toggle(this)">Select All<br>
+    His Spirit<br>
+    <input type="checkbox" name="verse" id="c1">1 Corinthians 3:16<br>
+    <input type="checkbox" name="verse" id="c2">1 Corinthians 2:12<br>
+    His Strength<br>
+    <input type="checkbox" name="verse" id="c3">Isaiah 41:10<br>
+    <input type="checkbox" name="verse" id="c4">Philippians 4:13<br>
+    His Faithfulness<br>
+    <input type="checkbox" name="verse" id="c5">Lamentations 3:22-23<br>
+    <input type="checkbox" name="verse" id="c6">Numbers 23:19<br>
+    His Peace<br>
+    <input type="checkbox" name="verse" id="c7">Isaiah 26:3<br>
+    <input type="checkbox" name="verse" id="c8">1 Peter 5:7<br>
+    His Provision<br>
+    <input type="checkbox" name="verse" id="c9">Romans 8:32<br>
+    <input type="checkbox" name="verse" id="c10">Philippians 4:19<br>
+    His Help in Temptation<br>
+    <input type="checkbox" name="verse" id="c11">Hebrews 2:18<br>
+    <input type="checkbox" name="verse" id="c12">Psalms 119:9,11<br><br>
+
+    <input type="button" value="Begin Quizzing" id="startquiz"
+	   onclick="startQuiz(this.form)">
+  </form>
+</div>
+
+<!-- VERSE QUIZ -->
+<div id="versequizsection">
+  <p>Spelling counts, punctuation and capitalization do not!</p>
+  <p class="ref" id="refdisplay1">ref1 here</p>
+  <form>
+    <textarea type="text" name="verseentry" id="verseentrybox" 
+	      onKeydown="Javascript: if (event.keyCode==13 || event.which==13) checkVerseAnswer();"></textarea>
+    <input type="button" value="Check" onclick="checkVerseAnswer()">
+  </form>
+  <p class="ref" id="refdisplay2">ref2 here</p>
+</div>
+
+<!-- REF QUIZ -->
+<div id="refquizsection">
+  <p>Spelling counts, punctuation and capitalization do not!</p>
+  <form>
+    <input type="text" name="refentry1" id="refentry1box">
+    <p class="verse" id="versedisplay">verse here</p>
+    <input type="text" name="refentry2" id="refentry2box"
+	   onKeydown="Javascript: if (event.keyCode==13 || event.which==13) checkRefAnswer();">
+    <input type="button" value="Check" onclick="checkRefAnswer()">
+  </form>
+</div>
+  </div> <!-- end content div -->
+  </div> <!-- end container div -->
+</body>
+</html>
